@@ -1,3 +1,5 @@
+import { ScrollRestoration } from "react-router-dom";
+
 const AddCoffee = () => {
   const handleAddCoffee = (e) => {
     e.preventDefault();
@@ -17,9 +19,23 @@ const AddCoffee = () => {
       details,
     };
     console.log(newCoffee);
+
+    fetch("http://localhost:5000/coffees", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newCoffee),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
+
   return (
     <div className="bg-[#F4F3F0] py-14">
+      <ScrollRestoration />
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="font-rancho text-3xl">Add New Coffee</h2>
         <p>
