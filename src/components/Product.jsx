@@ -9,7 +9,7 @@ const Product = ({ coffee }) => {
   // console.log(coffee);
   const handleDelete = (id) => {
     // console.log(id);
-    fetch(`http://localhost:5000/coffees/${id}`, {
+    fetch(`https://espresso-emporium-server-khaki.vercel.app/coffees/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

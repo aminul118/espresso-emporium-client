@@ -11,12 +11,12 @@ import { FaMapLocation } from "react-icons/fa6";
 const ContactUs = () => {
   return (
     <div className="bg-contact-image bg-cover py-14">
-      <div className=" grid grid-cols-2 container mx-auto gap-4 justify-center ic">
+      <div className=" grid grid-cols-2 container mx-auto gap-4 2xl:gap-32 justify-center ic">
         {/* Left side */}
         <div>
           <img className="w-14" src="/src/assets/icons/logo.png" alt="" />
           <h2 className="text-3xl font-rancho">Espresso Emporium</h2>
-          <p>
+          <p className="max-w-xl">
             Always ready to be your friend. Come & Contact with us to share your
             memorable moments, to share with your best companion.
           </p>
@@ -42,7 +42,7 @@ const ContactUs = () => {
         <div>
           <h2 className="text-3xl font-rancho">Contact with us</h2>
           <form>
-            <div className="flex flex-col  gap-2 max-w-lg">
+            <div className="flex flex-col  gap-2 ">
               <input
                 type="text"
                 name="name"
@@ -64,7 +64,7 @@ const ContactUs = () => {
                 placeholder="Message"
                 className="p-3 rounded-md h-32"
               />
-              <input type="submit" value="Send Message" />
+              <input className="btn-warning btn" type="submit" value="Send Message" />
             </div>
           </form>
         </div>
