@@ -13,7 +13,7 @@ const Products = ({ coffees }) => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 container mx-auto">
+      <div className="grid md:grid-cols-2 gap-4 container mx-auto">
         {coffees.map((coffee) => (
           <Product key={coffee._id} coffee={coffee} />
         ))}

@@ -7,14 +7,15 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { FaMapLocation } from "react-icons/fa6";
+import logo from "../assets/icons/logo.png";
 
 const ContactUs = () => {
   return (
     <div className="bg-contact-image bg-cover py-14">
-      <div className=" grid grid-cols-2 container mx-auto gap-4 2xl:gap-32 justify-center ic">
+      <div className=" grid md:grid-cols-2 container mx-auto gap-4 2xl:gap-32 justify-center px-4">
         {/* Left side */}
         <div>
-          <img className="w-14" src="/src/assets/icons/logo.png" alt="" />
+          <img className="w-14" src={logo} alt="" />
           <h2 className="text-3xl font-rancho">Espresso Emporium</h2>
           <p className="max-w-xl">
             Always ready to be your friend. Come & Contact with us to share your
@@ -64,7 +65,11 @@ const ContactUs = () => {
                 placeholder="Message"
                 className="p-3 rounded-md h-32"
               />
-              <input className="btn-warning btn" type="submit" value="Send Message" />
+              <input
+                className="btn-warning btn"
+                type="submit"
+                value="Send Message"
+              />
             </div>
           </form>
         </div>
